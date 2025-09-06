@@ -1,0 +1,341 @@
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Polygermie Auto-École bilingue – Dschang</title>
+  <meta name="description" content="Polygermie, auto-école bilingue à l’entrée campus de Dschang. Permis A, B, C, D, E,G. Inscriptions en ligne." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --fond:#0f172a;          /* bleu nuit */
+      --clair:#f8fafc;         /* texte clair */
+      --primaire:#22c55e;      /* vert */
+      --primaire-d:#16a34a;    /* vert foncé */
+      --accent:#38bdf8;        /* bleu clair */
+      --gris:#94a3b8;          /* gris texte secondaire */
+      --carte:#111827;         /* cartes */
+      --bord:#1f2937;
+      --rouge:#ef4444;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--fond);color:var(--clair);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+    header{position:sticky;top:0;backdrop-filter:blur(10px);background:rgba(15,23,42,.6);border-bottom:1px solid var(--bord);z-index:50}
+    .head{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .logo{display:flex;gap:10px;align-items:center;font-weight:700}
+    .logo-badge{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--primaire),#86efac);display:grid;place-items:center;color:#0a0f1f;font-weight:900}
+    nav{display:flex;gap:16px;font-weight:600}
+    nav a{padding:8px 10px;border-radius:10px}
+    nav a:hover{background:rgba(56,189,248,.12)}
+    .btn{display:inline-block;background:var(--primaire);color:#06210f;padding:12px 18px;border-radius:12px;font-weight:700;border:1px solid #16a34a}
+    .btn:hover{background:var(--primaire-d)}
+    .ghost{background:transparent;color:var(--clair);border:1px solid var(--bord)}
+    .hero{position:relative;isolation:isolate}
+    .hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.25;z-index:-2}
+    .hero .overlay{position:absolute;inset:0;background:radial-gradient(80% 70% at 50% 0%, rgba(56,189,248,.25), transparent 50%), linear-gradient(180deg, rgba(0,0,0,.2), rgba(15,23,42,.9));z-index:-1}
+    .hero .content{padding:72px 0 46px}
+    h1{font-size:clamp(28px,4vw,46px);line-height:1.1;margin:0 0 10px}
+    .lead{font-size:clamp(16px,2.2vw,20px);color:var(--gris);max-width:800px}
+    .band{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+    .band .chip{border:1px dashed var(--bord);padding:8px 12px;border-radius:999px;color:#d1d5db;background:rgba(2,6,23,.6)}
+    section{padding:46px 0;border-top:1px solid var(--bord)}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+    .card{background:var(--carte);border:1px solid var(--bord);border-radius:16px;padding:18px}
+    .muted{color:var(--gris)}
+    .grid{display:grid;gap:16px}
+    .g2{grid-template-columns:repeat(2,1fr)}
+    .g3{grid-template-columns:repeat(3,1fr)}
+    .g4{grid-template-columns:repeat(4,1fr)}
+    .gallery img{width:100%;height:220px;object-fit:cover;border-radius:14px;border:1px solid var(--bord)}
+    .contact{display:grid;grid-template-columns:1.4fr 1fr;gap:18px}
+    @media (max-width:900px){.contact{grid-template-columns:1fr}}
+    form{background:var(--carte);border:1px solid var(--bord);padding:20px;border-radius:16px}
+    label{font-weight:600;margin:10px 0 6px;display:block}
+    input,select,textarea{width:100%;padding:12px;border-radius:12px;border:1px solid var(--bord);background:#0b1220;color:var(--clair)}
+    textarea{min-height:110px;resize:vertical}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width:700px){.row{grid-template-columns:1fr}}
+    .hint{font-size:12px;color:var(--gris)}
+    .err{color:var(--rouge);font-size:13px;margin-top:6px;display:none}
+    .success{display:none;margin-top:12px;padding:12px;border:1px solid #14532d;background:#052e16;color:#86efac;border-radius:12px}
+    footer{padding:40px 0;border-top:1px solid var(--bord);color:#cbd5e1}
+    .phones{display:flex;gap:10px;flex-wrap:wrap}
+    .phones a{background:#0b1220;border:1px solid var(--bord);padding:8px 12px;border-radius:10px}
+    .center{text-align:center}
+    .table{width:100%;border-collapse:collapse;border:1px solid var(--bord);border-radius:12px;overflow:hidden}
+    .table th,.table td{border-bottom:1px solid var(--bord);padding:12px}
+    .table th{background:#0b1220;text-align:left}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid var(--bord);background:#0b1220}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap head">
+      <div class="logo">
+        <div class="logo-badge"><h1>P</h1></div>
+        <div>
+          <div style="font-size:18px">Polygermie</div>
+          <div class="muted" style="font-size:12px;margin-top:-2px">Auto-École bilingue – Dschang</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#formation">Nos formations</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#inscription" class="btn">S’inscrire</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img class="bg" src="https://picsum.photos/seed/route-1/1600/900" alt="Route et apprentissage de la conduite">
+    <div class="overlay"></div>
+    <div class="wrap content">
+      <h1><U>Auto-École <span style="color:var(--accent)">BILINGUE Polygermie </u> </span></h1>
+      <p class="lead">
+         
+     OBTENEZ VOTRE PERMIS EN TOUTE CONFIANCE AVEC AUTO-ECOLE BILINGUE POLYGERMIE <strong>(A, B, C, D, E,G)</strong>.
+      </p>
+      <div class="band">
+        <span class="chip">📍 Entrée campus de Dschang</span>
+        <span class="chip">☎ 675 06 72 02</span>
+        <span class="chip">☎ 699 07 54 05</span>
+        <span class="chip">✅ Paiement flexible</span>
+      </div>
+      <div style="margin-top:22px;display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn" href="#inscription">S’inscrire maintenant</a>
+        <a class="btn ghost" href="https://wa.me/237675067202" target="_blank" rel="noopener">WhatsApp Direct</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMATIONS / TYPES DE PERMIS -->
+  <section id="formation">
+    <div class="wrap">
+      <h2 style="margin:0 0 10px">Permis et formations</h2>
+      <p class="muted" style="margin:0 0 18px">Choisissez votre catégorie de permis et rejoignez la route en toute sécurité.</p>
+      <div class="cards">
+        <div class="card"><strong>Permis A</strong><div class="muted">Motocyclettes</div></div>
+        <div class="card"><strong>Permis B</strong><div class="muted">Véhicules légers</div></div>
+        <div class="card"><strong>Permis C</strong><div class="muted">Poids lourds</div></div>
+        <div class="card"><strong>Permis D</strong><div class="muted">Transport de personnes</div></div>
+        <div class="card"><strong>Permis E</strong><div class="muted">Équipements avec remorque</div></div>
+        <div class="card"><strong>Permis G</strong><div class="muted">engins lourd</div></div>
+      </div>
+      <div style="margin-top:24px">
+        <table class="table">
+          <thead><tr><th>Forfait</th><th>Inclut</th><th>Durée estimée</th></tr></thead>
+          <tbody>
+            <tr><td>Code de la route</td><td>Supports + séances en salle</td><td>2–4 semaines</td></tr>
+            <tr><td>Conduite pratique</td><td>Moniteur dédié + véhicule</td><td>Selon niveau</td></tr>
+            <tr><td>Pack complet</td><td>Code + conduite + examen blanc</td><td>4–8 semaines</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIE -->
+  <section id="galerie">
+    <div class="wrap">
+      <h2 style="margin:0 0 10px">Galerie</h2>
+      <p class="muted" style="margin:0 0 18px">notre galerie.</p>
+      <div class="grid g3 gallery">
+        <img src="C:/Users/image/pr.jpg" alt="Image de pelles" width="400">
+        <img src="C:/Users/image/br.jpg" alt="Image de pelles" width="400">
+        <img src="C:/Users/image/bg.jpg" alt="Image de pelles" width="400">
+        <img src="C:/Users/image/cv.webp" alt="Image de pelles" width="400">
+        <img src="C:/Users/image/bj.jpg" alt="Image de pelles" width="400">
+        <img src="C:/Users/image/bd.jpg" alt="Image de pelles" width="400">
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT & FORMULAIRE -->
+  <section id="inscription">
+    <div class="wrap contact">
+      <div>
+        <h2 style="margin:0 0 10px">Inscription en ligne</h2>
+        <p class="muted" style="margin:0 0 16px">Remplissez le formulaire ci-dessous. Nous vous contactons rapidement.</p>
+
+        <form id="formInscription" novalidate>
+          <div class="row">
+            <div>
+              <div class="err" id="err-phone">Numéro invalide.</div>
+            </div>
+          </div>
+            <div class="row">
+            <div>
+              <label for="nom">Nom & Prénom(s)</label>
+              <input id="nom" name="nom" type="text" placeholder="Ex. momo lex bryant" required>
+              <div class="err" id="err-nom">Veuillez renseigner votre nom.</div>
+            </div>
+            <div>
+              <label for="phone">Téléphone (WhatsApp)</label>
+              <input id="phone" name="phone" type="tel" placeholder="Ex. 675067202" pattern="[0-9 +]{8,}" required>
+              <div class="err" id="err-phone">Numéro invalide.</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" placeholder="exemple@mail.com">
+              <div class="hint">Optionnel mais recommandé.</div>
+            </div>
+            <div>
+              <label for="permis">Type de permis</label>
+              <select id="permis" name="permis" required>
+                <option value="">Sélectionnez…</option>
+                <option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>G</option>
+              </select>
+              <div class="err" id="err-permis">Choisissez une catégorie.</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="dispo">Disponibilités</label>
+              <select id="dispo" name="dispo" required>
+                <option value="">Sélectionnez…</option>
+                <option>Matin</option>
+                <option>Après-midi</option>
+                <option>Soir</option>
+                <option>Week-end</option>
+              </select>
+              <div class="err" id="err-dispo">Sélectionnez une disponibilité.</div>
+            </div>
+            <div>
+              <label for="date">Date souhaitée de début</label>
+              <input id="date" name="date" type="date">
+            </div>
+          </div>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Besoin spécifique, transfert depuis un autre centre, etc."></textarea>
+
+          <div style="margin:12px 0 6px;display:flex;gap:10px;align-items:center">
+            <input id="viaWA" type="checkbox" style="width:18px;height:18px">
+            <label for="viaWA" style="margin:0">M’envoyer aussi un récap sur WhatsApp</label>
+          </div>
+
+          <div style="display:flex;gap:10px;align-items:center;margin-top:12px">
+            <button class="btn" type="submit">Envoyer la demande</button>
+            <button class="btn ghost" type="reset">Réinitialiser</button>
+          </div>
+
+          <div class="success" id="ok">✅ Merci ! Votre demande a été préparée. Vérifiez votre e-mail/WhatsApp.</div>
+        </form>
+      </div>
+
+      <div>
+        <div class="card">
+          <h3 style="margin-top:0">Coordonnées</h3>
+          <p class="muted">Entrée campus de <strong>Dschang</strong></p>
+          <div class="phones">
+            <a href="tel:+237675067202">📞 675 06 72 02</a>
+            <a href="tel:+237699075405">📞 699 07 54 05</a>
+          </div>
+          <p style="margin-top:10px">
+            <a class="badge" href="https://wa.me/237675067202" target="_blank" rel="noopener">💬 WhatsApp direct</a>
+          </p>
+          <p class="muted">E-mail: <a href="mailto:contact@polygermie.cm">leopoldtiofack79@gmail.com</a> </p>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <h3 style="margin-top:0">Localisation</h3>
+          <p class="muted">Cliquez pour ouvrir sur la carte : <a href="https://www.google.com/maps/search/?api=1&query=Entr%C3%A9e+campus+Dschang" target="_blank" rel="noopener">Entrée campus de Dschang</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap center">
+      <div style="margin-bottom:8px">© <span id="year"></span> Auto-École bilingue Polygermie – Tous droits réservés.</div>
+      <div class="muted">Site vitrine créé avec HTML/CSS/JS. </div>
+    </div>
+  </footer>
+
+  <script>
+    // Année dynamique
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Petite validation & envoi
+    const f = document.getElementById('formInscription');
+    const el = id => document.getElementById(id);
+    function showErr(id, show){ const e = el(id); if(!e) return; e.style.display = show ? 'block' : 'none'; }
+
+    f.addEventListener('submit', function(e){
+      e.preventDefault();
+      // champs
+      const nom = el('nom').value.trim();
+      const phone = el('phone').value.trim();
+      const email = el('email').value.trim();
+      const permis = el('permis').value;
+      const dispo = el('dispo').value;
+      const date = el('date').value;
+      const message = el('message').value.trim();
+      const viaWA = el('viaWA').checked;
+
+      // validations simples
+      let ok = true;
+      showErr('err-nom', nom === '');
+      if(nom === '') ok = false;
+
+      const phoneOk = /^[0-9 +]{8,}$/.test(phone);
+      showErr('err-phone', !phoneOk);
+      if(!phoneOk) ok = false;
+
+      showErr('err-permis', permis === '');
+      if(permis === '') ok = false;
+
+      showErr('err-dispo', dispo === '');
+      if(dispo === '') ok = false;
+
+      if(!ok) return;
+
+      // Préparer contenu
+      const sujet = encodeURIComponent("Demande d'inscription – Auto-École bilingue Polygermie");
+      const corps =
+        `Nom: ${nom}%0D%0A` +
+        `Téléphone: ${phone}%0D%0A` +
+        (email ? `E-mail: ${email}%0D%0A` : '') +
+        `Permis: ${permis}%0D%0A` +
+        `Disponibilités: ${dispo}%0D%0A` +
+        (date ? `Début souhaité: ${date}%0D%0A` : '') +
+        (message ? `Message: ${message}%0D%0A` : '') +
+        `%0D%0AEnvoyé depuis le site Polygermie`;
+
+      // Envoi par e-mail (ouvre le client mail)
+      const mail = `mailto:momolexbryant@gmail.com subject=${sujet}&body=${corps}`;
+      window.location.href = mail;
+
+      // Optionnel: ouvrir WhatsApp avec le récap (numéro principal)
+      if(viaWA){
+        const waTexte =
+          `Bonjour, je souhaite m'inscrire.%0A` +
+          `Nom: ${encodeURIComponent(nom)}%0A` +
+          `Tel: ${encodeURIComponent(phone)}%0A` +
+          (email ? `Email: ${encodeURIComponent(email)}%0A` : '') +
+          `Permis: ${encodeURIComponent(permis)}%0A` +
+          `Dispo: ${encodeURIComponent(dispo)}%0A` +
+          (date ? `Début: ${encodeURIComponent(date)}%0A` : '') +
+          (message ? `Message: ${encodeURIComponent(message)}%0A` : '');
+        const wa = `https://wa.me/237682275134?text=${waTexte}`;
+        window.open(wa, '_blank');
+      }
+
+      // Message de succès local
+      el('ok').style.display = 'block';
+      f.reset();
+    });
+  </script>
+</body>
+</html>
